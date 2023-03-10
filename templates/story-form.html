@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} Story#1 {% endblock %}
+{%block content%}
+    <h1>M.A.D.L.I.B.S.</h1>
+   
+    <form action="/story">
+       <ul>
+        {%for prompt in prompts%}
+    <li>
+         <input type="text" placeholder= {{prompt}} name={{prompt}}>
+    </li>
+        {%endfor%}
+        <label for="theme">Pick story theme :</label>
+        <select id="theme" name="theme">
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+         
+        </select>
+    </ul>
+      
+        
+    
+    <div class="button"><button>Get me a story!</button></div>
+
+        
+
+    </form>
+    {%endblock%}
+
+<!-- {{place}}{{noun}}{{verb}}{{adjective}}{{plural_noun}} -->
